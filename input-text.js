@@ -7,7 +7,7 @@ export class InputText extends HTMLElement {
     this.style.padding = ".3em";
     this.style.margin = ".1em";
     this.style.wordBreak = "break-all";
-    this.style.lineHeight = "1.2";
+    this.style.lineHeight = "1.3";
     this.style.display = "inline-block";
     this.value = s || this.getAttribute("value");
   }
