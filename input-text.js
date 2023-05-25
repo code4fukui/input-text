@@ -10,18 +10,21 @@ export class InputText extends HTMLElement {
     this.style.lineHeight = "1.3";
     this.style.display = "inline-block";
     this.value = s || this.getAttribute("value");
+    this.focusmode = false;
     this.onfocus = () => {
       if (this.getAttribute("type") == "password") {
         this.textContent = this.value2;
+        this.focusmode = true;
       }
     };
     this.onblur = () => {
       if (this.getAttribute("type") == "password") {
         this.value = this.textContent;
+        this.focusmode = false;
       }
     };
   }
-  set value(s) {
+  set value(s = "") {
     if (this.getAttribute("type") == "password") {
       this.textContent = "*".repeat(s.length);
       this.value2 = s;
@@ -30,7 +33,7 @@ export class InputText extends HTMLElement {
     }
   }
   get value() {
-    if (this.getAttribute("type") == "password") {
+    if (!this.focusmode && this.getAttribute("type") == "password") {
       return this.value2;
     }
     return this.textContent;

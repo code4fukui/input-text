@@ -12,6 +12,13 @@
 
 <script type="module">
 intext.value = "abc";
+intext2.oninput = () => {
+  console.log("input2", intext2.value);
+};
+intext3.oninput = () => {
+  console.log("input3", intext3.value);
+};
+//intext3.value = "5678";
 </script>
 
 <style>
