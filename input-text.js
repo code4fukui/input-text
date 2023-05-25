@@ -24,7 +24,10 @@ export class InputText extends HTMLElement {
       }
     };
   }
-  set value(s = "") {
+  set value(s) {
+    if (s == null) {
+      s = "";
+    }
     if (this.getAttribute("type") == "password") {
       this.textContent = "*".repeat(s.length);
       this.value2 = s;
