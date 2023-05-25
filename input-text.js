@@ -10,11 +10,29 @@ export class InputText extends HTMLElement {
     this.style.lineHeight = "1.3";
     this.style.display = "inline-block";
     this.value = s || this.getAttribute("value");
+    this.onfocus = () => {
+      if (this.getAttribute("type") == "password") {
+        this.textContent = this.value2;
+      }
+    };
+    this.onblur = () => {
+      if (this.getAttribute("type") == "password") {
+        this.value = this.textContent;
+      }
+    };
   }
   set value(s) {
-    this.textContent = s;
+    if (this.getAttribute("type") == "password") {
+      this.textContent = "*".repeat(s.length);
+      this.value2 = s;
+    } else {
+      this.textContent = s;
+    }
   }
   get value() {
+    if (this.getAttribute("type") == "password") {
+      return this.value2;
+    }
     return this.textContent;
   }
 };
