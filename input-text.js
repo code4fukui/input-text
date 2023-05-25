@@ -9,7 +9,7 @@ export class InputText extends HTMLElement {
     this.style.wordWrap = "break-word";
     this.style.lineHeight = "1.2";
     this.style.display = "inline-block";
-    this.value = s;
+    this.value = s || this.getAttribute("value");
   }
   set value(s) {
     this.textContent = s;
