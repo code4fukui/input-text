@@ -1,4 +1,7 @@
 # input-text
+
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
 A custom HTML element that provides a text input field with additional features.
 
 ## Demo

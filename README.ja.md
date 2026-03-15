@@ -1,17 +1,17 @@
 # input-text
-カスタムHTML入力要素を提供する軽量ライブラリです。
+カスタム HTML 入力要素を提供する軽量ライブラリです。
 
 ## デモ
-[こちら](https://code4fukui.github.io/input-text/)でデモを確認できます。
+[こちら](https://code4fukui.github.io/input-text/) でデモを確認できます。
 
 ## 機能
 - 通常の入力要素と同様の入力が可能
 - パスワード入力にも対応
-- `contentEditable`属性で自由な編集が可能
-- CSSでスタイリングが簡単
+- `contentEditable` 属性で自由な編集が可能
+- CSS でスタイリングが簡単
 
 ## 使い方
-HTMLにカスタム要素として `<input-text>` を設置し、`input-text.js`をインポートするだけで使えます。
+HTML にカスタム要素として `<input-text>` を設置し、`input-text.js` をインポートするだけで使えます。
 
 ```html
 <script type="module" src="./input-text.js"></script>
